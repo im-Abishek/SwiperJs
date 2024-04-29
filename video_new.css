@@ -1,0 +1,212 @@
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+.swiper {
+  width: 50%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.swiper-slide video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+#swiperModal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #fefefe00;
+  height: 100%;
+  width: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+#closeModal {
+  position: absolute;
+  right: 10%;
+  font-size: 45px;
+  font-weight: 900;
+}
+.video-progress-bar {
+  width: 0%;
+  height: 4px; /* You can adjust the height as needed */
+  background-color: rgba(255, 255, 255, 0.7); /* Color of the progress bar */
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 3px 5px 0px;
+}
+.swiper-pagination-bullets {
+  display: none;
+}
+.swiper-button-next {
+  right: 10%;
+  color: #000;
+}
+.swiper-button-prev {
+  left: 10%;
+  color: #000;
+}
+.profileContainer {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0px 10px;
+  box-sizing: border-box;
+  top: 2%;
+}
+.leftProfile {
+  display: flex;
+  align-items: center;
+}
+.profileIcon {
+  height: 30px;
+  width: 30px;
+  border-radius: 30px;
+  background-color: #eee;
+}
+.profileName {
+  color: #eee;
+  padding-left: 5px;
+}
+.svgIcon {
+  user-select: none;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  fill: currentcolor;
+  flex-shrink: 0;
+  color: white;
+  font-size: 22.56px;
+  filter: drop-shadow(black 0px 0px 5px);
+}
+.share {
+  transform: scaleX(-1);
+}
+/* Product Info styles */
+.product-info {
+  position: absolute;
+  bottom: 2%;
+  left: 40px;
+  width: 70%;
+  background: rgb(255 255 255 / 35%);
+  color: white;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+.product-details {
+  display: flex;
+  flex: 1;
+}
+.item-image {
+  width: 100%; /* Adjust as needed */
+  height: 100%; /* Adjust as needed */
+  background: #f07272; /* Placeholder color */
+  border-top-left-radius: 10px;
+}
+.add-to-cart {
+  background-color: #464545;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 0px 0px 10px 10px;
+  font-weight: 700;
+}
+.cart-container,
+.quantity-controls {
+  display: flex;
+  align-items: center;
+}
+.quantity-controls {
+  margin-left: 10px;
+}
+.quantity-display {
+  padding: 0px 5px;
+  color: #000;
+}
+.item-details {
+  display: flex;
+  flex-direction: column;
+  flex: 0.7;
+  justify-content: center;
+}
+.item-details p {
+  margin: 0px;
+  padding: 5px 0px 5px 5px;
+  color: #000;
+  font-weight: 700;
+}
+.size-selection {
+  margin-top: 10px;
+  display: none; /* Hidden by default */
+}
+.sizes {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+.size-btn {
+  padding: 5px 15px;
+  margin: 5px;
+  border: none;
+  background-color: #eee;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+.size-btn:hover {
+  background-color: #ddd;
+}
+.size-btn.selected {
+  background-color: black;
+  color: white;
+}
